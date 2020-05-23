@@ -1,5 +1,5 @@
 # CoronaUI
-Esse projeto é um aprendizado e uso da criação de app usando SwiftUI e Combine.
+This project only purpose is to create an entire app using SwiftUI and Combine. Included Unit Test and UI Test
 
 # Covid-19 - iOS
 

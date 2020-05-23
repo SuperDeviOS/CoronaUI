@@ -33,5 +33,5 @@ With CoronaUI Tracker you'll be aware of the pandemic situation in real time.
 * https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
 
 ## Suggestions and Feedback? Please, contact us
-juliaomartinsch@gmail.com
-mfelipesp@gmail.com
+- juliaomartinsch@gmail.com
+- mfelipesp@gmail.com

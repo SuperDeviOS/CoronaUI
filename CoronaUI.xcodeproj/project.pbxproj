@@ -103,13 +103,6 @@
 			children = (
 				636346BB24796B0F00F74508 /* Sources */,
 				636346BA24796B0800F74508 /* Resources */,
-				6363468724796AD400F74508 /* AppDelegate.swift */,
-				6363468924796AD400F74508 /* SceneDelegate.swift */,
-				6363468E24796AD500F74508 /* ContentView.swift */,
-				6363469024796AD900F74508 /* Assets.xcassets */,
-				6363469524796AD900F74508 /* LaunchScreen.storyboard */,
-				6363469824796AD900F74508 /* Info.plist */,
-				6363468B24796AD400F74508 /* CoronaUI.xcdatamodeld */,
 				6363469224796AD900F74508 /* Preview Content */,
 			);
 			path = CoronaUI;
@@ -144,6 +137,8 @@
 		636346BA24796B0800F74508 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6363469824796AD900F74508 /* Info.plist */,
+				6363469024796AD900F74508 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -151,6 +146,8 @@
 		636346BB24796B0F00F74508 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				636346BE24796D0200F74508 /* Data Persistance + Core Data */,
+				636346BD24796CD100F74508 /* Home */,
 				636346BC24796B1600F74508 /* Application */,
 			);
 			path = Sources;
@@ -159,8 +156,27 @@
 		636346BC24796B1600F74508 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				6363469524796AD900F74508 /* LaunchScreen.storyboard */,
+				6363468924796AD400F74508 /* SceneDelegate.swift */,
+				6363468724796AD400F74508 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		636346BD24796CD100F74508 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6363468E24796AD500F74508 /* ContentView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		636346BE24796D0200F74508 /* Data Persistance + Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				6363468B24796AD400F74508 /* CoronaUI.xcdatamodeld */,
+			);
+			path = "Data Persistance + Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

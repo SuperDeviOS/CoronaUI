@@ -17,7 +17,7 @@ struct ContentView: View {
             HomeView()
                 .tabItem {
                     VStack {
-                        Image("first")
+                        Image(systemName: "person.crop.circle")
                         Text("Home")
                     }
             }

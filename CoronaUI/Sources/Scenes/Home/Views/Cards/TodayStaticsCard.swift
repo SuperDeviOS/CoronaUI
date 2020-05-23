@@ -18,7 +18,7 @@ struct TodayStaticsCard: View {
         
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 1)
+                .stroke(lineWidth: 0.5)
             RoundedRectangle(cornerRadius: 10)
                 .fill()
                 .foregroundColor(.clear )

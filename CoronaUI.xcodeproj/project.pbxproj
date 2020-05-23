@@ -84,14 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		284FCBBC24797AF100CE3C58 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				284FCBBD24797AFC00CE3C58 /* Views */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		284FCBBD24797AFC00CE3C58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +115,23 @@
 				284FCBC5247981FF00CE3C58 /* EdgeInsets+Spacing.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		284FCBC72479863400CE3C58 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				284FCBC82479864000CE3C58 /* Tabbar */,
+				636346BD24796CD100F74508 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		284FCBC82479864000CE3C58 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				6363468E24796AD500F74508 /* ContentView.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		6363467B24796AD400F74508 = {
@@ -193,9 +202,9 @@
 		636346BB24796B0F00F74508 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				284FCBC72479863400CE3C58 /* Scenes */,
 				284FCBC4247981E900CE3C58 /* Extensions */,
 				636346BE24796D0200F74508 /* Data Persistance + Core Data */,
-				636346BD24796CD100F74508 /* Home */,
 				636346BC24796B1600F74508 /* Application */,
 			);
 			path = Sources;
@@ -214,8 +223,7 @@
 		636346BD24796CD100F74508 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				284FCBBC24797AF100CE3C58 /* Home */,
-				6363468E24796AD500F74508 /* ContentView.swift */,
+				284FCBBD24797AFC00CE3C58 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";

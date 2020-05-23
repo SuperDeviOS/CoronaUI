@@ -101,6 +101,8 @@
 		6363468624796AD400F74508 /* CoronaUI */ = {
 			isa = PBXGroup;
 			children = (
+				636346BB24796B0F00F74508 /* Sources */,
+				636346BA24796B0800F74508 /* Resources */,
 				6363468724796AD400F74508 /* AppDelegate.swift */,
 				6363468924796AD400F74508 /* SceneDelegate.swift */,
 				6363468E24796AD500F74508 /* ContentView.swift */,
@@ -137,6 +139,28 @@
 				636346AE24796AD900F74508 /* Info.plist */,
 			);
 			path = CoronaUIUITests;
+			sourceTree = "<group>";
+		};
+		636346BA24796B0800F74508 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		636346BB24796B0F00F74508 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				636346BC24796B1600F74508 /* Application */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		636346BC24796B1600F74508 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

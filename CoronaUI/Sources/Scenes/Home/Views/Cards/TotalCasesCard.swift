@@ -25,10 +25,17 @@ struct TotalCasesCard: View {
                 .foregroundColor(.clear)
             
             VStack(alignment: .center, spacing: 4) {
-                Text("Total cases")
-                Text("10000")
-                    .bold()
-                headerContentView
+                VStack(alignment: .center, spacing: 4) {
+                    Text("Total cases")
+                        .bold()
+                    Text("\(totalCases)")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                        .accessibility(label: Text("valueTotalCases"))
+                }
+                Divider()
+                detailsCasesView
+                Divider()
             }
         }
         .padding()
@@ -37,22 +44,31 @@ struct TotalCasesCard: View {
 
 extension TotalCasesCard {
     
-    var headerContentView: some View {
-        HStack(alignment: .center, spacing: 30) {
+    var detailsCasesView: some View {
+        HStack(alignment: .center, spacing: 50) {
             VStack(alignment: .center, spacing: 5) {
                 Text("Active")
+                    .bold()
                 Text("\(activeCases)")
-                .bold()
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .accessibility(label: Text("valueActiveCases"))
             }
             VStack(alignment: .center, spacing: 5) {
                 Text("Recovered")
+                    .bold()
                 Text("\(recoveredCases)")
-                .bold()
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .accessibility(label: Text("valueRecoveredCases"))
             }
             VStack(alignment: .center, spacing: 5) {
                 Text("Fatal")
+                    .bold()
                 Text("\(fatalCases)")
-                .bold()
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .accessibility(label: Text("valueFatalCases"))
             }
         }
     }

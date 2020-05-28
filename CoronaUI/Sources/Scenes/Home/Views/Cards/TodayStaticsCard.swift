@@ -68,7 +68,7 @@ extension TodayStaticsCard {
                     .foregroundColor(.gray)
                     .accessibility(label: Text("valueDeathsLine"))
             }
-            Divider()
+            Divider().padding(.bottomDivider)
             
         }.padding(.top)
     }

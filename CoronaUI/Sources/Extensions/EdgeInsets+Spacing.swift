@@ -10,7 +10,7 @@ import SwiftUI
 
 extension EdgeInsets {
     static var bottomDivider: EdgeInsets {
-        return .init(top: 0,
+        return .init(top: 4.0,
                      leading: 0,
                      bottom: 7.0,
                      trailing: 0)

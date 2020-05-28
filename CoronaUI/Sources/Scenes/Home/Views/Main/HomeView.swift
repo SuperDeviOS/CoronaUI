@@ -13,16 +13,21 @@ struct HomeView: View {
         
         NavigationView {
             List {
-                TotalCasesCard(totalCases: 5000,
-                               activeCases: 2000,
-                               recoveredCases: 2000,
-                               fatalCases: 1000)
-                .listRowInsets(EdgeInsets())
-                TodayStaticsCard(date: "13/04/20",
-                newCases: 293,
-                deaths: 27)
-                .listRowInsets(EdgeInsets())
+                Section(header: Text("")) {
+                    TotalCasesCard(totalCases: 5000,
+                                   activeCases: 2000,
+                                   recoveredCases: 2000,
+                                   fatalCases: 1000)
+                    .listRowInsets(EdgeInsets())
+                }
+                Section {
+                    TodayStaticsCard(date: "13/04/20",
+                    newCases: 293,
+                    deaths: 27)
+                    .listRowInsets(EdgeInsets())
+                }
             }
+        .listStyle(GroupedListStyle())
         .navigationBarTitle("Home")
         }
     }

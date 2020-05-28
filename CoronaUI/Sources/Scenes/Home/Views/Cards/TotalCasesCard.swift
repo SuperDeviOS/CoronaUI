@@ -3,7 +3,7 @@
 //  CoronaUI
 //
 //  Created by Carlos Henrique Martins on 5/24/20.
-//  Copyright © 2020 Carlos Henrique Martins. All rights reserved.
+//  Copyright ©️ 2020 Carlos Henrique Martins. All rights reserved.
 //
 
 import SwiftUI
@@ -25,14 +25,25 @@ struct TotalCasesCard: View {
                 .foregroundColor(.clear)
             
             VStack(alignment: .center, spacing: 4) {
-                VStack(alignment: .center, spacing: 4) {
-                    Text("Total cases")
-                        .bold()
-                    Text("\(totalCases)")
-                        .font(.body)
-                        .foregroundColor(.gray)
-                        .accessibility(label: Text("valueTotalCases"))
+                ZStack {
+                    RoundedRectangle(cornerRadius: 155)
+                    .stroke(lineWidth: 7)
+                    .foregroundColor(.red)
+                    
+                    
+                    VStack(alignment: .center, spacing: 4) {
+                        Text("Total cases")
+                            .bold()
+                        Text("\(totalCases)")
+                            .font(.body)
+                            .foregroundColor(.gray)
+                            .accessibility(label: Text("valueTotalCases"))
+                    }
+                    .padding([.bottom, .top], 100)
+                    
                 }
+                .padding(50)
+                
                 Divider()
                 detailsCasesView
                 Divider()

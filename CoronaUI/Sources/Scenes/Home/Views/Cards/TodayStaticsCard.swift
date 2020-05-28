@@ -19,10 +19,8 @@ struct TodayStaticsCard: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(lineWidth: 0.5)
-            RoundedRectangle(cornerRadius: 10)
-                .fill()
-                .foregroundColor(.clear )
-            
+                .foregroundColor(.blue)
+
             VStack(alignment: .leading, spacing: 4) {
                 headerView
                 listView
@@ -41,7 +39,7 @@ extension TodayStaticsCard {
             Text("Today")
                 .font(.title)
                 .accessibility(label: Text("todayHeader"))
-            Text("(\(date))")
+            Text(self.date)
                 .font(.subheadline)
                 .foregroundColor(.gray)
                 .accessibility(label: Text("dateTodayHeader"))

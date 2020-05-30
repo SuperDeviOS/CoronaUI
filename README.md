@@ -1,6 +1,8 @@
 # CoronaUI
 This project only purpose is to create an entire app using SwiftUI and Combine. Included Unit Test and UI Test
 
+Design was inspired by this open source project design https://github.com/Quaggie/Covid-19Tracker
+
 # Covid-19 - iOS
 
 **This is a <ins>Non-Commercial</ins> project, we do not interfere with [C.D.C](https://wwwnc.cdc.gov/eid/page/copyright-and-disclaimers) and [W.H.O](https://www.who.int/about/who-we-are/publishing-policies/copyright) copyrights.  We agree with [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/igo/)**

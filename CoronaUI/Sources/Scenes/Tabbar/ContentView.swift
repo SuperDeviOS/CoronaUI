@@ -28,7 +28,7 @@ struct ContentView: View {
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("second")
+                        Image(systemName: "magnifyingglass")
                         Text("Search")
                     }
                 }

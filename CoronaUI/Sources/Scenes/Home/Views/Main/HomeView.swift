@@ -9,20 +9,39 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @State private var editMode = false
     @State private var searchText = ""
     
     var body: some View {
         
         NavigationView {
-            VStack {
-                SearchBar(text: "Searching...",
-                          textSearched: $searchText)
+            VStack(alignment: .leading) {
+                
+                if !editMode {
+                    Button(action: {
+                        self.editMode.toggle()
+                    }) {
+                        Text("BRAZIL")
+                            .font(.headline)
+                        Image(systemName: "pencil")
+                    }
+                    .foregroundColor(.primary)
                     .padding()
                 
-                #if DEBUG
-                Text(searchText.isEmpty ? "Test Area for SearchBar" : searchText)
-                #endif
+                } else {
+                    SearchBar(text: "Searching...",
+                              textSearched: $searchText) {                                
+                                self.editMode.toggle()
+                                
+                    }
+                    .padding()
+
+                    #if DEBUG
+                    Text(searchText.isEmpty ? "Test Area for SearchBar" : searchText)
+                    #endif
+                }
+                
+                
                 
                 List {
                     Section(header: Text("")) {

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SearchBar: View {
-    
+    @Environment(\.editMode) var editMode
     var text: String?
     @Binding var textSearched: String
     var actionButton: (()->())?

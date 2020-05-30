@@ -30,7 +30,7 @@ struct HomeView: View {
                 
                 } else {
                     SearchBar(text: "Searching...",
-                              textSearched: $searchText) {                                
+                              textSearched: $searchText) {
                                 self.editMode.toggle()
                                 
                     }
@@ -75,8 +75,25 @@ struct HomeView: View {
 
 #if DEBUG
 struct HomeView_Previews: PreviewProvider {
+    
+    static var listOfDevices = ["iPhone SE", "iPhone 11 Pro Max"]
     static var previews: some View {
-        HomeView()
+        Group {
+            
+            ForEach(self.listOfDevices, id: \.self) { item in
+                HomeView()
+                .previewDevice(PreviewDevice(rawValue: item))
+                .previewDisplayName(item)
+            }
+            
+            HomeView()
+                .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
+                .previewDisplayName("Com TEXTO GRANDES")
+            
+            HomeView()
+                .environment(\.colorScheme, .dark)
+                .previewDisplayName("Com DARK MODE")
+        }
     }
 }
 #endif

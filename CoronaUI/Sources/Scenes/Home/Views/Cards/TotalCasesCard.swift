@@ -20,9 +20,7 @@ struct TotalCasesCard: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(lineWidth: 0.5)
-            RoundedRectangle(cornerRadius: 10)
-                .fill()
-                .foregroundColor(.clear)
+                .foregroundColor(.blue)
             
             VStack(alignment: .center, spacing: 4) {
                 ZStack {

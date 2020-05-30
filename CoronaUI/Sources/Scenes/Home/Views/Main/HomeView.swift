@@ -21,6 +21,14 @@ struct HomeView: View {
                     .listRowInsets(EdgeInsets())
                 }
                 Section {
+                    HStack {
+                        PercentageCasesView(typeOfCase: .recovery,
+                                            percentageCase: "1,0%")
+                        PercentageCasesView(typeOfCase: .fatality,
+                                            percentageCase: "0,5%")
+                    }
+                }
+                Section {
                     TodayStaticsCard(date: "13/04/20",
                     newCases: 293,
                     deaths: 27)

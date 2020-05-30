@@ -23,6 +23,9 @@
 		636346C5247ACA4400F74508 /* TotalCasesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636346C3247ACA4400F74508 /* TotalCasesCard.swift */; };
 		636346C6247ACA4400F74508 /* TotalCasesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636346C3247ACA4400F74508 /* TotalCasesCard.swift */; };
 		63E39A5224828631007E182A /* PercentageCasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E39A5124828631007E182A /* PercentageCasesView.swift */; };
+		63E39A552482A872007E182A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E39A542482A872007E182A /* NetworkManager.swift */; };
+		63E39A572482ACB1007E182A /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E39A562482ACB1007E182A /* Summary.swift */; };
+		63E39A5A2482ACFF007E182A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E39A592482ACFF007E182A /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		636346AE24796AD900F74508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636346C3247ACA4400F74508 /* TotalCasesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCasesCard.swift; sourceTree = "<group>"; };
 		63E39A5124828631007E182A /* PercentageCasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCasesView.swift; sourceTree = "<group>"; };
+		63E39A542482A872007E182A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		63E39A562482ACB1007E182A /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		63E39A592482ACFF007E182A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,9 +216,11 @@
 		636346BB24796B0F00F74508 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				63E39A582482ACD4007E182A /* Model */,
+				63E39A532482A84F007E182A /* Network */,
 				284FCBC72479863400CE3C58 /* Scenes */,
 				284FCBC4247981E900CE3C58 /* Extensions */,
-				636346BE24796D0200F74508 /* Data Persistance + Core Data */,
+				636346BE24796D0200F74508 /* Core Data */,
 				636346BC24796B1600F74508 /* Application */,
 			);
 			path = Sources;
@@ -236,12 +244,29 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		636346BE24796D0200F74508 /* Data Persistance + Core Data */ = {
+		636346BE24796D0200F74508 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
 				6363468B24796AD400F74508 /* CoronaUI.xcdatamodeld */,
 			);
-			path = "Data Persistance + Core Data";
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		63E39A532482A84F007E182A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				63E39A542482A872007E182A /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		63E39A582482ACD4007E182A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63E39A562482ACB1007E182A /* Summary.swift */,
+				63E39A592482ACFF007E182A /* Country.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,11 +402,14 @@
 			files = (
 				6363468824796AD400F74508 /* AppDelegate.swift in Sources */,
 				6363468D24796AD500F74508 /* CoronaUI.xcdatamodeld in Sources */,
+				63E39A552482A872007E182A /* NetworkManager.swift in Sources */,
 				63E39A5224828631007E182A /* PercentageCasesView.swift in Sources */,
+				63E39A5A2482ACFF007E182A /* Country.swift in Sources */,
 				284FCBC6247981FF00CE3C58 /* EdgeInsets+Spacing.swift in Sources */,
 				284FCBBF24797B1200CE3C58 /* TodayStaticsCard.swift in Sources */,
 				636346C4247ACA4400F74508 /* TotalCasesCard.swift in Sources */,
 				284FCBC324797F0300CE3C58 /* HomeView.swift in Sources */,
+				63E39A572482ACB1007E182A /* Summary.swift in Sources */,
 				6363468F24796AD500F74508 /* ContentView.swift in Sources */,
 				6363468A24796AD400F74508 /* SceneDelegate.swift in Sources */,
 			);

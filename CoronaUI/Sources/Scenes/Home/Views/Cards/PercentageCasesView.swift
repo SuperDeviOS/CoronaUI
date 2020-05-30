@@ -58,8 +58,10 @@ struct PercentageCasesView: View {
     }
 }
 
+#if DEBUG
 struct PercentageCasesView_Previews: PreviewProvider {
     static var previews: some View {
         PercentageCasesView(typeOfCase: .recovery, percentageCase: "50%")
     }
 }
+#endif

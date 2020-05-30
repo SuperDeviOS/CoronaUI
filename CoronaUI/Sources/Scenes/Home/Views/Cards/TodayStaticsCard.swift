@@ -75,6 +75,7 @@ extension TodayStaticsCard {
     
 }
 
+#if DEBUG
 struct TodayStaticsCard_Previews: PreviewProvider {
     static var previews: some View {
         TodayStaticsCard(date: "13/04/20",
@@ -82,3 +83,4 @@ struct TodayStaticsCard_Previews: PreviewProvider {
                          deaths: 27)
     }
 }
+#endif

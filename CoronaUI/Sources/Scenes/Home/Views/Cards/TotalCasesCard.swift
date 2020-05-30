@@ -83,6 +83,7 @@ extension TotalCasesCard {
     }
 }
 
+#if DEBUG
 struct TotalCasesCard_Previews: PreviewProvider {
     static var previews: some View {
         TotalCasesCard(totalCases: 5000,
@@ -91,3 +92,4 @@ struct TotalCasesCard_Previews: PreviewProvider {
                        fatalCases: 1000)
     }
 }
+#endif

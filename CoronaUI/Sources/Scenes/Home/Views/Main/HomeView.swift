@@ -9,40 +9,55 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var searchText = ""
+    
     var body: some View {
         
         NavigationView {
-            List {
-                Section(header: Text("")) {
-                    TotalCasesCard(totalCases: 5000,
-                                   activeCases: 2000,
-                                   recoveredCases: 2000,
-                                   fatalCases: 1000)
-                    .listRowInsets(EdgeInsets())
-                }
-                Section {
-                    HStack {
-                        PercentageCasesView(typeOfCase: .recovery,
-                                            percentageCase: "1,0%")
-                        PercentageCasesView(typeOfCase: .fatality,
-                                            percentageCase: "0,5%")
+            VStack {
+                SearchBar(text: "Searching...",
+                          textSearched: $searchText)
+                    .padding()
+                
+                #if DEBUG
+                Text(searchText.isEmpty ? "Test Area for SearchBar" : searchText)
+                #endif
+                
+                List {
+                    Section(header: Text("")) {
+                        TotalCasesCard(totalCases: 5000,
+                                       activeCases: 2000,
+                                       recoveredCases: 2000,
+                                       fatalCases: 1000)
+                        .listRowInsets(EdgeInsets())
+                    }
+                    Section {
+                        HStack {
+                            PercentageCasesView(typeOfCase: .recovery,
+                                                percentageCase: "1,0%")
+                            PercentageCasesView(typeOfCase: .fatality,
+                                                percentageCase: "0,5%")
+                        }
+                    }
+                    Section {
+                        TodayStaticsCard(date: "13/04/20",
+                        newCases: 293,
+                        deaths: 27)
+                        .listRowInsets(EdgeInsets())
                     }
                 }
-                Section {
-                    TodayStaticsCard(date: "13/04/20",
-                    newCases: 293,
-                    deaths: 27)
-                    .listRowInsets(EdgeInsets())
-                }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle("Home")
             }
-        .listStyle(GroupedListStyle())
-        .navigationBarTitle("Home")
         }
     }
 }
 
+#if DEBUG
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
 }
+#endif

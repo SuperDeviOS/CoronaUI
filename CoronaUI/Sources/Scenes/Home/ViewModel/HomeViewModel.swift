@@ -15,9 +15,20 @@ final class HomeViewModel: ObservableObject, Identifiable {
     private var disabled = Set<AnyCancellable>()
     @Published var country: Country?
     @Published var notFail: Bool = true
+    @Published var searchingCountry: String = ""
+    
     
     init(summaryNetwork: SummaryNetworkManagerType = SummaryNetworkManager()){
         self.summaryNetwork = summaryNetwork
+        
+        $searchingCountry
+            .dropFirst()
+            .sink(receiveCompletion: { _ in
+                    print("Error ao digitar ou acabou a conexao")
+                 }) { outPut in
+                    print(outPut)
+            }
+            .store(in: &disabled)
     }
     
     public func fetch() {

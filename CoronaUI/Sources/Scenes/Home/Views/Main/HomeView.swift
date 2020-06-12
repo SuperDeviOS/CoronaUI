@@ -18,7 +18,6 @@ struct HomeView: View {
         
         NavigationView {
             List {
-                
                 if viewModel.notFail && viewModel.country == nil {
                     loadingView
                 
@@ -59,6 +58,8 @@ extension HomeView {
     
     @ViewBuilder
     var containerView: some View {
+        SearchBar(text: "Search :D", textSearched: $viewModel.searchingCountry)
+        
         Section(header: Text("")) {
             TotalCasesCard(totalCases: viewModel.country?.newConfirmed ?? 0,
                            activeCases: 2000,

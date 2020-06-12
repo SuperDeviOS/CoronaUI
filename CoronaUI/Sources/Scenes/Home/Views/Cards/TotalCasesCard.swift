@@ -3,7 +3,7 @@
 //  CoronaUI
 //
 //  Created by Carlos Henrique Martins on 5/24/20.
-//  Copyright ©️ 2020 Carlos Henrique Martins. All rights reserved.
+//  Copyright ©️ 2020 SuperDeviOS. All rights reserved.
 //
 
 import SwiftUI

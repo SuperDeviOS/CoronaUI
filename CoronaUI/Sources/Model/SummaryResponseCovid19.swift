@@ -11,10 +11,12 @@
 import Foundation
 
 // MARK: - Summary
-struct Summary: Codable {
+
+// MARK: - Covid19SummaryResponse
+public struct SummaryResponseCovid19: Codable {
     let global: Global?
     let countries: [Country]?
-    let date: Date?
+    let date: String?
 
     enum CodingKeys: String, CodingKey {
         case global = "Global"
@@ -24,11 +26,11 @@ struct Summary: Codable {
 }
 
 // MARK: - Country
-struct Country: Codable {
+public struct Country: Codable {
     let country, countryCode, slug: String?
     let newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int?
     let newRecovered, totalRecovered: Int?
-    let date: Date?
+    let date: String?
 
     enum CodingKeys: String, CodingKey {
         case country = "Country"
@@ -45,7 +47,7 @@ struct Country: Codable {
 }
 
 // MARK: - Global
-struct Global: Codable {
+public struct Global: Codable {
     let newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int?
     let newRecovered, totalRecovered: Int?
 

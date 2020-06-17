@@ -41,8 +41,6 @@ struct HomeView: View {
                     #endif
                 }
                 
-                
-                
                 List {
                     Section(header: Text("")) {
                         TotalCasesCard(totalCases: 5000,

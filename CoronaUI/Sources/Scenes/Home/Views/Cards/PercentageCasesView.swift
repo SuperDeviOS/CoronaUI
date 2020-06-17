@@ -49,12 +49,11 @@ struct PercentageCasesView: View {
                     Color(self.getSeparatorForegroundColor(basedOn: typeOfCase))
                         .frame(width: 15,
                                height: 5)
-                    Text("\(percentageCase)")
+                    Text(percentageCase)
                         .foregroundColor(.gray)
                         .padding(.top, 10.0)
                 }
         }
-        .padding()
     }
 }
 
